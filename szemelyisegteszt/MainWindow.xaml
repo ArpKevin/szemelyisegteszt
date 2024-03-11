@@ -1,0 +1,49 @@
+﻿<Window x:Class="szemelyisegteszt.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:szemelyisegteszt"
+        mc:Ignorable="d"
+        Title="Teszt" Height="450" Width="800">
+    <Grid>
+        <Label Content="Neved:" HorizontalAlignment="Left" Height="29" Margin="10,18,0,0" VerticalAlignment="Top" Width="78"/>
+        <TextBox x:Name="txbAlias" HorizontalAlignment="Left" Margin="91,24,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="161" Background="#FFA29999" Height="23"/>
+        <Label Content="E-mail címed:" HorizontalAlignment="Left" Height="29" Margin="7,52,0,0" VerticalAlignment="Top" Width="81"/>
+        <TextBox x:Name="txbEMail" HorizontalAlignment="Left" Margin="91,58,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="161" Background="#FFA29999" Height="23"/>
+        <Label Content="1. Hogyan töltöd a szabadidődet?&#xD;&#xA;" HorizontalAlignment="Left" Height="29" Margin="292,21,0,0" VerticalAlignment="Top" Width="198"/>
+        <RadioButton Content="Olvasással" HorizontalAlignment="Left" Margin="306,55,0,0" VerticalAlignment="Top"/>
+        <RadioButton Content="Sportolással" HorizontalAlignment="Left" Margin="419,75,0,0" VerticalAlignment="Top"/>
+        <RadioButton Content="Barátokkal lógok" HorizontalAlignment="Left" Margin="306,75,0,0" VerticalAlignment="Top"/>
+        <RadioButton Content="Kreatív tevékenységek" HorizontalAlignment="Left" Margin="384,55,0,0" VerticalAlignment="Top"/>
+        <Label Content="2. Milyen típusú filmeket szeretsz nézni?" HorizontalAlignment="Left" Height="29" Margin="552,24,0,0" VerticalAlignment="Top" Width="223"/>
+        <ListBox x:Name="listBoxFilmek" HorizontalAlignment="Left" Height="92" Margin="552,52,0,0" VerticalAlignment="Top" Width="223">
+            <ListBoxItem HorizontalAlignment="Center" Background="#FFD62020" Foreground="White">Akció és kaland</ListBoxItem>
+            <ListBoxItem HorizontalAlignment="Center" Background="#FF247F3E" Foreground="White">Romantikus filmek</ListBoxItem>
+            <ListBoxItem HorizontalAlignment="Center" Background="#FF2738C3" Foreground="White">Horror vagy thriller</ListBoxItem>
+            <ListBoxItem HorizontalAlignment="Center" Background="#FFADD017" Foreground="White">Dokumentumfilmek</ListBoxItem>
+        </ListBox>
+        <Label Content="5. Milyen környezetben érzed magad a legkényelmesebben?" HorizontalAlignment="Left" Height="29" Margin="460,158,0,0" VerticalAlignment="Top" Width="330"/>
+        <ComboBox x:Name="comboboxStresszes" HorizontalAlignment="Left" Margin="474,192,0,0" VerticalAlignment="Top" Width="298">
+            <ComboBoxItem>Nyüzsgő, társasági helyeken, mint például koncerteken vagy partikon</ComboBoxItem>
+            <ComboBoxItem>Nyugodt, csendes helyeken, mint például egy könyvtárban vagy a saját otthonodban</ComboBoxItem>
+            <ComboBoxItem>A szabadban, természetben, például erdőben vagy a tengerparton</ComboBoxItem>
+            <ComboBoxItem>Inspiráló helyeken, mint például múzeumokban vagy művészeti galériákban</ComboBoxItem>
+        </ComboBox>
+        <Label Content="4. Milyen a kommunikációs stílusod?" HorizontalAlignment="Left" Height="28" Margin="286,98,0,0" VerticalAlignment="Top" Width="210"/>
+        <StackPanel x:Name="stackpanelStilus" Height="82" Margin="286,135,0,0" VerticalAlignment="Top" Width="188" HorizontalAlignment="Left">
+            <CheckBox Content="Sprint Planning Meeting"/>
+            <CheckBox Content="Daily Conversion"/>
+            <CheckBox Content="Sprint Retrospective"/>
+            <CheckBox Content="Backlog Grooming"/>
+        </StackPanel>
+        <WrapPanel x:Name="wrapPanelStilus" Height="82" Margin="11,146,0,0" VerticalAlignment="Top" Width="270" HorizontalAlignment="Left">
+            <CheckBox Content="Nyugodtan és racionálisan"/>
+            <CheckBox Content="Kerülöm a konfliktust"/>
+            <CheckBox Content="Érzelmileg és intenzíven"/>
+            <CheckBox Content="Megpróbálom megoldani a problémát"/>
+        </WrapPanel>
+        <Label Content="3. Hogyan reagálsz a stresszes helyzetekre?" HorizontalAlignment="Left" Height="29" Margin="11,108,0,0" VerticalAlignment="Top" Width="330"/>
+
+    </Grid>
+</Window>
