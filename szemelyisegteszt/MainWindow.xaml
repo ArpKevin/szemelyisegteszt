@@ -24,26 +24,27 @@
             <ListBoxItem HorizontalAlignment="Center" Background="#FFADD017" Foreground="White">Dokumentumfilmek</ListBoxItem>
         </ListBox>
         <Label Content="5. Milyen környezetben érzed magad a legkényelmesebben?" HorizontalAlignment="Left" Height="29" Margin="460,158,0,0" VerticalAlignment="Top" Width="330"/>
-        <ComboBox x:Name="comboboxStresszes" HorizontalAlignment="Left" Margin="474,192,0,0" VerticalAlignment="Top" Width="298">
+        <ComboBox x:Name="comboboxKorny" HorizontalAlignment="Left" Margin="474,192,0,0" VerticalAlignment="Top" Width="298">
             <ComboBoxItem>Nyüzsgő, társasági helyeken, mint például koncerteken vagy partikon</ComboBoxItem>
             <ComboBoxItem>Nyugodt, csendes helyeken, mint például egy könyvtárban vagy a saját otthonodban</ComboBoxItem>
             <ComboBoxItem>A szabadban, természetben, például erdőben vagy a tengerparton</ComboBoxItem>
             <ComboBoxItem>Inspiráló helyeken, mint például múzeumokban vagy művészeti galériákban</ComboBoxItem>
         </ComboBox>
-        <Label Content="4. Milyen a kommunikációs stílusod?" HorizontalAlignment="Left" Height="28" Margin="286,98,0,0" VerticalAlignment="Top" Width="210"/>
-        <StackPanel x:Name="stackpanelStilus" Height="82" Margin="286,135,0,0" VerticalAlignment="Top" Width="188" HorizontalAlignment="Left">
-            <CheckBox Content="Sprint Planning Meeting"/>
-            <CheckBox Content="Daily Conversion"/>
-            <CheckBox Content="Sprint Retrospective"/>
-            <CheckBox Content="Backlog Grooming"/>
+        <Label Content="4. Milyen a kommunikációs stílusod?" HorizontalAlignment="Left" Height="28" Margin="264,98,0,0" VerticalAlignment="Top" Width="210"/>
+        <StackPanel x:Name="stackpanelStilus" Height="82" Margin="286,134,0,0" VerticalAlignment="Top" Width="188" HorizontalAlignment="Left">
+            <CheckBox Content="Közvetlen és őszinte"/>
+            <CheckBox Content="Udvarias és megfontolt"/>
+            <CheckBox Content="Társaságkedvelő és beszédes"/>
+            <CheckBox Content="Zárkózott és hallgatag"/>
         </StackPanel>
-        <WrapPanel x:Name="wrapPanelStilus" Height="82" Margin="11,146,0,0" VerticalAlignment="Top" Width="270" HorizontalAlignment="Left">
+        <WrapPanel x:Name="wrapPanelStressz" Height="82" Margin="11,146,0,0" VerticalAlignment="Top" Width="270" HorizontalAlignment="Left">
             <CheckBox Content="Nyugodtan és racionálisan"/>
             <CheckBox Content="Kerülöm a konfliktust"/>
             <CheckBox Content="Érzelmileg és intenzíven"/>
             <CheckBox Content="Megpróbálom megoldani a problémát"/>
         </WrapPanel>
-        <Label Content="3. Hogyan reagálsz a stresszes helyzetekre?" HorizontalAlignment="Left" Height="29" Margin="11,108,0,0" VerticalAlignment="Top" Width="330"/>
+        <Label Content="3. Hogyan reagálsz a stresszes helyzetekre?" HorizontalAlignment="Left" Height="29" Margin="11,108,0,0" VerticalAlignment="Top" Width="241"/>
+        <Button x:Name="btnMain" Content="OK" HorizontalAlignment="Left" Margin="292,238,0,0" VerticalAlignment="Top" Height="53" Width="147" FontSize="36" Click="btnMain_Click"/>
 
     </Grid>
 </Window>
