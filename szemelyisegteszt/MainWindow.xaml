@@ -12,10 +12,13 @@
         <Label Content="E-mail címed:" HorizontalAlignment="Left" Height="29" Margin="7,52,0,0" VerticalAlignment="Top" Width="81"/>
         <TextBox x:Name="txbEMail" HorizontalAlignment="Left" Margin="91,58,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="161" Background="#FFA29999" Height="23"/>
         <Label Content="1. Hogyan töltöd a szabadidődet?&#xD;&#xA;" HorizontalAlignment="Left" Height="29" Margin="292,21,0,0" VerticalAlignment="Top" Width="198"/>
-        <RadioButton Content="Olvasással" HorizontalAlignment="Left" Margin="306,55,0,0" VerticalAlignment="Top"/>
-        <RadioButton Content="Sportolással" HorizontalAlignment="Left" Margin="419,75,0,0" VerticalAlignment="Top"/>
-        <RadioButton Content="Barátokkal lógok" HorizontalAlignment="Left" Margin="306,75,0,0" VerticalAlignment="Top"/>
-        <RadioButton Content="Kreatív tevékenységek" HorizontalAlignment="Left" Margin="384,55,0,0" VerticalAlignment="Top"/>
+        <WrapPanel x:Name="wrappanelSzabadido" Orientation="Vertical" Margin="257,50,243,338" Width="300">
+            <RadioButton x:Name="radioButtonOlvasas" Content="Olvasással" Width="150" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+            <RadioButton x:Name="radioButtonSport" Content="Sportolással" Width="150" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+            <RadioButton x:Name="radioButtonBaratok" Content="Barátokkal lógok" Width="150" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+            <RadioButton x:Name="radioButtonKreativ" Content="Kreatív tevékenységek" Width="150" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        </WrapPanel>
+
         <Label Content="2. Milyen típusú filmeket szeretsz nézni?" HorizontalAlignment="Left" Height="29" Margin="552,24,0,0" VerticalAlignment="Top" Width="223"/>
         <ListBox x:Name="listBoxFilmek" HorizontalAlignment="Left" Height="92" Margin="552,52,0,0" VerticalAlignment="Top" Width="223">
             <ListBoxItem HorizontalAlignment="Center" Background="#FFD62020" Foreground="White">Akció és kaland</ListBoxItem>

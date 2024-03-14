@@ -23,9 +23,9 @@ namespace szemelyisegteszt
         {
             InitializeComponent();
         }
-        public ValuesShow()
-        {
+        //public ValuesShow()
+        //{
 
-        }
+        //}
     }
 }

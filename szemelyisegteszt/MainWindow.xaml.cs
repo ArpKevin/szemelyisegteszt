@@ -26,7 +26,19 @@ namespace szemelyisegteszt
             // E-mail címed (TextBox)
             string email = string.IsNullOrEmpty(txbEMail.Text) ? "nem töltötte ki" : txbEMail.Text;
 
-             // Szabdidő
+            // Szabdidő
+            string szabadido = "nem töltötte ki";
+
+            foreach (var radioButton in wrappanelSzabadido.Children.OfType<RadioButton>())
+            {
+                if (radioButton.IsChecked == true)
+                {
+                    szabadido = radioButton.Content.ToString();
+                    break;
+                }
+            }
+
+            txbAlias.Text = szabadido;
 
             // Film
             string film = string.Empty;
