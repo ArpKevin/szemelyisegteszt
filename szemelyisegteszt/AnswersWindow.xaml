@@ -7,17 +7,19 @@
         mc:Ignorable="d"
         Title="Válaszok" Height="450" Width="800">
     <Grid>
-        <Label Content="Név:" HorizontalAlignment="Left" Margin="69,29,0,0" VerticalAlignment="Top" FontSize="24"/>
-        <Label Content="Email:" HorizontalAlignment="Left" Margin="65,70,0,0" VerticalAlignment="Top" FontSize="24"/>
-        <Label x:Name="lblNev" HorizontalAlignment="Left" Margin="144,29,0,0" VerticalAlignment="Top" FontSize="18"/>
-        <Label x:Name="lblEmail" HorizontalAlignment="Left" Margin="144,70,0,0" VerticalAlignment="Top" FontSize="18"/>
+        <Label Content="Név:" HorizontalAlignment="Left" Margin="69,-3,0,0" VerticalAlignment="Top" FontSize="24"/>
+        <Label Content="Email:" HorizontalAlignment="Left" Margin="67,33,0,0" VerticalAlignment="Top" FontSize="24"/>
+        <Label x:Name="lblNev" HorizontalAlignment="Left" Margin="126,1,0,0" VerticalAlignment="Top" FontSize="18"/>
+        <Label x:Name="lblEmail" HorizontalAlignment="Left" Margin="141,39,0,0" VerticalAlignment="Top" FontSize="18"/>
+        <Label Content="Ezzel tölti a szabadidejét:" HorizontalAlignment="Left" Margin="65,75,0,0" VerticalAlignment="Top" Width="217" FontSize="18" Height="37"/>
+        <Label x:Name="lblSzabadIdo" HorizontalAlignment="Left" Margin="279,75,0,0" VerticalAlignment="Top" FontSize="18"/>
         <Label Content="Ilyen típusú filmeket szeret:" HorizontalAlignment="Left" Margin="65,112,0,0" VerticalAlignment="Top" FontSize="18"/>
-        <Label x:Name="lblFilmek" Content="" HorizontalAlignment="Left" Margin="335,112,0,0" VerticalAlignment="Top" FontSize="18"/>
+        <Label x:Name="lblFilmek" HorizontalAlignment="Left" Margin="296,112,0,0" VerticalAlignment="Top" FontSize="18"/>
         <Label Content="Így reagál stresszes helyzetekre:" HorizontalAlignment="Left" Margin="65,146,0,0" VerticalAlignment="Top" FontSize="18"/>
-        <Label x:Name="lblStressz" Content="" HorizontalAlignment="Left" Margin="362,150,0,0" VerticalAlignment="Top" FontSize="18"/>
+        <Label x:Name="lblStressz" HorizontalAlignment="Left" Margin="332,146,0,0" VerticalAlignment="Top" FontSize="18"/>
         <Label Content="Kommunikációs stílusa(i):" HorizontalAlignment="Left" Margin="65,180,0,0" VerticalAlignment="Top" FontSize="18"/>
-        <Label Content="Ilyen környezetben érzi magát a legkényelmesebben:" HorizontalAlignment="Left" Margin="65,214,0,0" VerticalAlignment="Top" FontSize="14" Width="335" Height="83"/>
-        <Label x:Name="lblKorny" Content="" HorizontalAlignment="Left" Margin="417,217,0,0" VerticalAlignment="Top"/>
-
+        <Label x:Name="lblKomm" HorizontalAlignment="Left" Margin="274,180,0,0" VerticalAlignment="Top" FontSize="18"/>
+        <Label Content="Ilyen környezetben érzi magát a legkényelmesebben:" HorizontalAlignment="Left" Margin="65,214,0,0" VerticalAlignment="Top" FontSize="18" Width="432" Height="37"/>
+        <Label x:Name="lblKorny" HorizontalAlignment="Left" Margin="67,242,0,0" VerticalAlignment="Top" FontSize="18"/>
     </Grid>
 </Window>

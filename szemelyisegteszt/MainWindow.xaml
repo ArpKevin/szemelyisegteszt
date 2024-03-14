@@ -12,13 +12,12 @@
         <Label Content="E-mail címed:" HorizontalAlignment="Left" Height="29" Margin="7,52,0,0" VerticalAlignment="Top" Width="81"/>
         <TextBox x:Name="txbEMail" HorizontalAlignment="Left" Margin="91,58,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="161" Background="#FFA29999" Height="23"/>
         <Label Content="1. Hogyan töltöd a szabadidődet?&#xD;&#xA;" HorizontalAlignment="Left" Height="29" Margin="292,21,0,0" VerticalAlignment="Top" Width="198"/>
-        <WrapPanel x:Name="wrappanelSzabadido" Orientation="Vertical" Margin="257,50,243,338" Width="300">
-            <RadioButton x:Name="radioButtonOlvasas" Content="Olvasással" Width="150" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-            <RadioButton x:Name="radioButtonSport" Content="Sportolással" Width="150" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-            <RadioButton x:Name="radioButtonBaratok" Content="Barátokkal lógok" Width="150" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-            <RadioButton x:Name="radioButtonKreativ" Content="Kreatív tevékenységek" Width="150" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-        </WrapPanel>
-
+        <StackPanel x:Name="stackpanelSzabadido" Margin="303,52,197,-2" Width="300">
+            <RadioButton Content="Olvasással" Width="140" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+            <RadioButton Content="Sportolással" Width="140" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+            <RadioButton Content="Barátokkal lógok" Width="140" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+            <RadioButton Content="Kreatív tevékenységek" Width="140" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        </StackPanel>
         <Label Content="2. Milyen típusú filmeket szeretsz nézni?" HorizontalAlignment="Left" Height="29" Margin="552,24,0,0" VerticalAlignment="Top" Width="223"/>
         <ListBox x:Name="listBoxFilmek" HorizontalAlignment="Left" Height="92" Margin="552,52,0,0" VerticalAlignment="Top" Width="223">
             <ListBoxItem HorizontalAlignment="Center" Background="#FFD62020" Foreground="White">Akció és kaland</ListBoxItem>
@@ -33,21 +32,21 @@
             <ComboBoxItem>A szabadban, természetben, például erdőben vagy a tengerparton</ComboBoxItem>
             <ComboBoxItem>Inspiráló helyeken, mint például múzeumokban vagy művészeti galériákban</ComboBoxItem>
         </ComboBox>
-        <Label Content="4. Milyen a kommunikációs stílusod?" HorizontalAlignment="Left" Height="28" Margin="264,98,0,0" VerticalAlignment="Top" Width="210"/>
-        <StackPanel x:Name="stackpanelStilus" Height="82" Margin="286,134,0,0" VerticalAlignment="Top" Width="188" HorizontalAlignment="Left">
+        <Label Content="4. Milyen a kommunikációs stílusod?" HorizontalAlignment="Left" Height="28" Margin="264,116,0,0" VerticalAlignment="Top" Width="210"/>
+        <StackPanel x:Name="stackpanelStilus" Height="82" Margin="267,158,0,0" VerticalAlignment="Top" Width="188" HorizontalAlignment="Left">
             <CheckBox Content="Közvetlen és őszinte"/>
             <CheckBox Content="Udvarias és megfontolt"/>
             <CheckBox Content="Társaságkedvelő és beszédes"/>
             <CheckBox Content="Zárkózott és hallgatag"/>
         </StackPanel>
+        <Label Content="3. Hogyan reagálsz a stresszes helyzetekre?" HorizontalAlignment="Left" Height="29" Margin="11,108,0,0" VerticalAlignment="Top" Width="241"/>
         <WrapPanel x:Name="wrapPanelStressz" Height="82" Margin="11,146,0,0" VerticalAlignment="Top" Width="270" HorizontalAlignment="Left">
             <CheckBox Content="Nyugodtan és racionálisan"/>
             <CheckBox Content="Kerülöm a konfliktust"/>
             <CheckBox Content="Érzelmileg és intenzíven"/>
             <CheckBox Content="Megpróbálom megoldani a problémát"/>
         </WrapPanel>
-        <Label Content="3. Hogyan reagálsz a stresszes helyzetekre?" HorizontalAlignment="Left" Height="29" Margin="11,108,0,0" VerticalAlignment="Top" Width="241"/>
-        <Button x:Name="btnMain" Content="OK" HorizontalAlignment="Left" Margin="292,238,0,0" VerticalAlignment="Top" Height="53" Width="147" FontSize="36" Click="btnMain_Click"/>
+        <Button x:Name="btnMain" Content="OK" HorizontalAlignment="Left" Margin="292,261,0,0" VerticalAlignment="Top" Height="53" Width="147" FontSize="36" Click="btnMain_Click"/>
 
     </Grid>
 </Window>

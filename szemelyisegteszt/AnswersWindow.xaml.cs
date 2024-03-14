@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -23,9 +24,16 @@ namespace szemelyisegteszt
         {
             InitializeComponent();
         }
-        //public ValuesShow()
-        //{
-
-        //}
+        public AnswersWindow(string neved, string email, string szabadido, string film, string stressz, string stilus, string kornyezet)
+        {
+            InitializeComponent();
+            lblNev.Content = neved;
+            lblEmail.Content = email;
+            lblSzabadIdo.Content = szabadido;
+            lblFilmek.Content = film;
+            lblStressz.Content = stressz;
+            lblKomm.Content = stilus;
+            lblKorny.Content = kornyezet;
+        }
     }
 }

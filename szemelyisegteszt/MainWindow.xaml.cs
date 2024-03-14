@@ -20,16 +20,17 @@ namespace szemelyisegteszt
 
         private void btnMain_Click(object sender, RoutedEventArgs e)
         {
+            string szoveg = "nem töltötte ki";
             // Neved (TextBox)
-            string neved = string.IsNullOrEmpty(txbAlias.Text) ? "nem töltötte ki" : txbAlias.Text;
+            string neved = string.IsNullOrEmpty(txbAlias.Text) ? szoveg : txbAlias.Text;
 
             // E-mail címed (TextBox)
-            string email = string.IsNullOrEmpty(txbEMail.Text) ? "nem töltötte ki" : txbEMail.Text;
+            string email = string.IsNullOrEmpty(txbEMail.Text) ? szoveg : txbEMail.Text;
 
-            // Szabdidő
-            string szabadido = "nem töltötte ki";
+            // Szabadidő
+            string szabadido = szoveg;
 
-            foreach (var radioButton in wrappanelSzabadido.Children.OfType<RadioButton>())
+            foreach (var radioButton in stackpanelSzabadido.Children.OfType<RadioButton>())
             {
                 if (radioButton.IsChecked == true)
                 {
@@ -38,10 +39,8 @@ namespace szemelyisegteszt
                 }
             }
 
-            txbAlias.Text = szabadido;
-
             // Film
-            string film = string.Empty;
+            string film = szoveg;
             if (listBoxFilmek.SelectedItem != null)
             {
                 var selectedListBoxItem = listBoxFilmek.SelectedItem;
@@ -51,43 +50,47 @@ namespace szemelyisegteszt
                 else
                     film = selectedListBoxItem.ToString();
             }
-            else
-            {
-                film = "nem töltötte ki";
-            }
 
             // Stressz
-            string stressz = string.Empty;
+            string stressz = szoveg;
 
-
-            // Stílus
-            string stilus = string.Empty;
-            var checkedElementCount = stackpanelStilus.Children
+            var checkedElementStressz = wrapPanelStressz.Children
                 .OfType<CheckBox>()
                 .Where(cb => cb.IsChecked == true)
                 .Select(cb => cb.Content)
                 .ToList();
 
-            if (checkedElementCount.Count == 0)
+            if (checkedElementStressz.Count > 0)
             {
-                stilus = "nem töltötte ki";
+                stressz = string.Join(", ", checkedElementStressz);
             }
-            else
+
+            // Stílus
+            string stilus = szoveg;
+            var checkedElementStilus = stackpanelStilus.Children
+                .OfType<CheckBox>()
+                .Where(cb => cb.IsChecked == true)
+                .Select(cb => cb.Content)
+                .ToList();
+
+            if (checkedElementStilus.Count > 0)
             {
-                stilus = string.Join(", ", checkedElementCount);
+                stilus = string.Join(", ", checkedElementStilus);
             }
 
             // Környezet
-            string kornyezet = string.Empty;
+            string kornyezet = szoveg;
             if (comboboxKorny.SelectedItem != null)
             {
                 var selectedComboboxItem = comboboxKorny.SelectedItem;
-                if (selectedComboboxItem is ComboBoxItem comboBoxItem)
-                    stressz = comboBoxItem.Content.ToString();
-                else
-                    stressz = selectedComboboxItem.ToString();
+                kornyezet = (selectedComboboxItem is ComboBoxItem comboBoxItem)
+                    ? comboBoxItem.Content.ToString()
+                    : kornyezet = selectedComboboxItem.ToString();
             }
-        }
 
+            AnswersWindow values = new AnswersWindow(neved, email, szabadido, film, stressz, stilus, kornyezet);
+            values.Show();
+            this.Hide();
+        }
     }
 }
